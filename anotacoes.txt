@@ -1,0 +1,77 @@
+
+
+npm init -y
+
+
+README.md
+
+
+#Micro serviços com nodejs
+
+-utilizando kafka
+-utilizando node
+
+## Aplicação
+
+-API principal (STATION)
+- Geração de certificado
+
+
+## Fluxo
+
+- API principal envia uma mensagem pro serviço de certificado para gerar o certificado;
+-Micro serviço de certificado devolve uma resposta(Sincrona/assincrona)
+
+Se conseguir sincrona/asssincrona:
+
+-recebe uma resposta assincrona de quando o email com o certificado foi enviado.
+
+## o que sabemos?
+
+- REST (latencia);
+- Redis / RabbitMQ / KAFKA**;
+
+- Nubank, uber, Paypal, Netflix;
+
+
+//////
+
+api 
+
+npm i express
+
+npm install --save-dev nodemon -D
+
+npm i sucrase
+
+npm install --save-dev sucrase
+
+///
+
+jeit/micro - framework
+
+molecular - framework
+
+kafka 
+
+///
+
+npm install kafkajs
+
+///
+
+YML
+
+KAFKA_CREATE_TOPICS: "issue-certification:1:1"
+
+1 numero da partição : 1 numero da replica  algo assim
+
+///
+
+
+DOCKER
+
+precisa rodar docker compose up no projeto certification
+ 
+
+///
